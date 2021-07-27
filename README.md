@@ -1,21 +1,24 @@
-# lumen-kafka-pub
-lumen Kafka publisher
+#Lumen Kafka Publisher
 
-## To produce
+---
+
+### To produce
 
 ```shell
-$ php artisan kafka:run-producer
+$ php artisan kafka:run-producer --topic=test
 ```
 
-## To consume
+### To consume
 
 ```shell
 $ kafka-console-consumer --bootstrap-server 127.0.0.1:9092 --topic your_topic --from-beginning --group your_group_name
 ```
 
+> please use below steps to use console consumer
+
 ---
 
-### Install Kafka using brew on MAC OS
+## Install Kafka using brew on MAC OS
 
 ```shell
 $ brew install kafka
@@ -41,3 +44,7 @@ $ brew services stop zookeeper
 $ zookeeper-server-start /usr/local/etc/kafka/zookeeper.properties
 $ kafka-server-start /usr/local/etc/kafka/server.properties
 ```
+
+Credits
+
+* 
